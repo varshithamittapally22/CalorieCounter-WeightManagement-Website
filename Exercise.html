@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calorie Counter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    div.container {
+        width: 100%;
+        border: 1px solid black;
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: deepskyblue;
+        clear: left;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 10;
+        font-family: Algerian;
+        overflow: hidden;
+        background-color: skyblue;
+        overflow: auto;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    article {
+        margin-left: 0px;
+        border-left: 0px solid black;
+        padding: 1em;
+        overflow: hidden;
+    }
+    
+    h2 {
+        color: #FFA500;
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Calorie Counter/Weight Management System</a>
+            </div>
+
+            <ul class="nav nav navbar-nav">
+                <li class="active"><a href="Home.html">Home</a></li>
+                <li class="active"><a href="Food.html">Food</a></li>
+                <li class="active"><a href="Exercise.html">Exercise</a></li>
+                <li class="active"><a href="Apps.html">Apps</a></li>
+                <li class="active"><a href="Challenges.html">Challenges</a></li>
+                <li class="active"><a href="Blog.html">Blog</a></li>
+                <li class="active"><a href="ContactUs.html">About us</a></li>
+                <li class="active"><a href="Index.html">Log Out</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <h1><b> <center> Calories Burned for various Activities</center></b> </h1>
+    <hr>
+    <center>
+        <form>
+            <p><label for="weight">body weight (kgs):</label><input type="text" id="bodyWeight" value=""> </p>
+            <fieldset>
+                <legend>add activity</legend>
+                <label for="desc">description (optional):</label><input type="text">
+                <label for="minutes">minutes:</label><input type="text" id="minutes" value="">
+                <label for="mets">intensity (<acronym title="Metabolic Equivalent of Task">MET</acronym>):</label>
+                <input
+                    type="text" id="mets" value="">
+                    <br> <br>
+                    <button type="submit" onclick="return calculateCaloriesBurned()" ;return false;>Enter</button>
+
+                    <input type="text" id="caloriesBurned" value="" readonly> Calories burned per hour.
+            </fieldset>
+
+
+        </form>
+
+        <div id="examples">
+            <table>
+                <caption>Example <acronym title="Metabolic Equivalent of Task">MET</acronym> values for different activities (<a href="http://en.wikipedia.org/wiki/Metabolic_equivalent"
+                        target="_blank"><cite>wikipedia</cite></a>)</caption>
+                <thead>
+                    <tr>
+                        <th>Physical Activity</th>
+                        <th><acronym title="Metabolic Equivalent of Task">MET</acronym></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Light Intensity Activities</th>
+                        <th>&lt; 3</th>
+                    </tr>
+                    <tr>
+                        <td>sleeping</td>
+                        <td>0.9</td>
+                    </tr>
+                    <tr>
+                        <td>watching television</td>
+                        <td>1.0</td>
+                    </tr>
+                    <tr>
+                        <td>writing, desk work, typing</td>
+                        <td>1.8</td>
+                    </tr>
+                    <tr>
+                        <td>walking, less than 2.0 mph, level ground, very slow</td>
+                        <td>2.0</td>
+                    </tr>
+                    <tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Moderate Intensity Activities</th>
+                        <th>3 to 6</th>
+                    </tr>
+                    <tr>
+                        <td>bicycling, stationary, 50 watts, very light effort</td>
+                        <td>3.0</td>
+                    </tr>
+                    <tr>
+                        <td>calisthenics, home exercise, light or moderate effort</td>
+                        <td>3.5</td>
+                    </tr>
+                    <tr>
+                        <td>bicycling, &lt;10 mph, leisure, to work or for pleasure</td>
+                        <td>4.0</td>
+                    </tr>
+                    <tr>
+                        <td>bicycling, stationary, 100 watts, light effort</td>
+                        <td>5.5</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <th>Vigorous Intensity Activities</th>
+                        <th>&gt; 6</th>
+                    </tr>
+                    <tr>
+                        <td>jogging, general</td>
+                        <td>7.0</td>
+                    </tr>
+                    <tr>
+                        <td>pushups, situps, pullups</td>
+                        <td>8.0</td>
+                    </tr>
+                    <tr>
+                        <td>calisthenics, jumping jacks, vigorous effort</td>
+                        <td>8.0</td>
+                    </tr>
+                    <tr>
+                        <td>running jogging, in place</td>
+                        <td>8.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="info">For a more comprehensive guide,
+            <a  style="font-weight: bold" href="http://prevention.sph.sc.edu/tools/docs/documents_compendium.pdf" target="_blank">download</a> the latest
+            <acronym>PDF</acronym> compendium of <acronym title="Metabolic Equivalent of Task">MET</acronym> values for various
+            activities.</p>
+             <a style="font-weight: bold" href="https://www.youtube.com/user/FitnessBlender" target="_blank">Watch Workout Videos</a> workout videos</p>
+
+        <footer>Copyright &copy;2017-2018 Calorie Counter.com</footer>
+        </div>
+
+        </div>
+        <script src="Excercise.js"></script>
+    </center>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="two.js"></script>
+
+</body>

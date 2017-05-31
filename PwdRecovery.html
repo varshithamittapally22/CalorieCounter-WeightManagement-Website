@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("PwdRecovery").onclick = function () {
+                var email = document.getElementById("email").value;
+                if (email) {
+                    location.href = "Feedback.html";
+                }
+                else
+                    alert("Please provide valid  email address");
+
+            };
+        };
+
+    </script>
+    <style>
+        body {
+            background-image: url(login.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Please enter your registered email</h1>
+    <input type="email" id="email"></input>
+    <button id="PwdRecovery">Submit</button>
+</body>
+
+</html>

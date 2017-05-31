@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        window.onload = function(){ 
+    document.getElementById("myButton").onclick = function () {
+          location.href = "Success.html";
+        };
+
+};
+        
+      </script>
+        <style>
+         body{
+        background-image: url(login.jpg);
+    }
+      footer {
+        padding: 1em;
+        color: white;
+        background-color: deepskyblue;
+        clear: left;
+        text-align: center;
+    }
+    </style>
+    </head>
+<body>      
+    <h2 style="font-weight: bold;text-align: center">Registration Form</h2>
+    <table style="color: darkslateblue; margin-left:40% ">
+      <tr>
+        <td><label><b>First Name:</b></label></td>
+        <td> <input type="text" placeholder="First name" name="First name" required></td>
+      </tr>
+	 
+      <tr>
+        <td><label><b>Last Name:</b></label></td>
+        <td> <input type="text" placeholder="Last name" name="Last name" required></td>
+      </tr>
+	 
+      <tr>
+        <td>
+          <label><b>Prefix:</b></label></td>
+        <td>
+          <select>
+      <option value="Mr.">Mr.</option>
+      <option value="Ms.">Ms.</option>
+      <option value="Mrs.">Mrs.</option>
+
+    </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Date of Birth:</b></label>
+        </td>
+        <td><input type="datetime-local" name="bdaytime"></td>
+      </tr>
+      <tr>
+        <td><label><b>Weight:</b></label></td>
+
+        <td><input type="text" placeholder="Weight" name="Weight" size="5" required>
+        
+          <select>
+      <option value="Kgs">Kgs</option>
+      <option value="lbs">lbs</option>
+    </select></td>
+       
+      </tr>
+      <tr>
+        <td> <label><b>Height:</b></label></td>
+
+
+        <td><input type="text" placeholder="Height" name="Height" size="5" required>
+
+         <select>
+      <option value="cms">cms</option>
+      <option value="fts">fts</option>
+    </select></td>
+       
+      </tr>
+      <tr>
+        <td>
+          <label><b>Gender:</b></label></td>
+        <td>
+          <select>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Address:</b></label>
+        </td>
+        <td>
+          <textarea rows="5" cols="25"></textarea>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Phone Number:</b></label>
+        </td>
+
+        <td>
+          <input type="text" placeholder="Phone Number" name="Phone Number" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Email Address:</b></label></td>
+        <td>
+          <input type="text" placeholder="Email Address" name="Email Address" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Username:</b></label></td>
+        <td>
+          <input type="text" placeholder="Username" name="uname" required></td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Password:</b></label></td>
+        <td>
+          <input type="password" placeholder="Password" name="psw" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label><b>Confirm Password:</b></label>
+        </td>
+        <td>
+
+          <input type="password" placeholder="Confirm Password" name="psw" required>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox">       
+          <p style="font-weight: bold">I agree to  Terms & Conditions.</p>
+        </td>
+      </tr>
+      <tr><td>
+        <button id="myButton" style="background-color: lightblue; font-weight: bold">SignUp/Register</button>
+      <</td></tr>
+    </table>
+
+
+    <footer>Copyright &copy;2017-2018 Calorie Counter.com</footer>
+
+  </body>
+</html>
+
+  

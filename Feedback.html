@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calorie Counter</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    div.container {
+        width: 100%;
+        border: 1px solid black;
+    }
+    
+    footer {
+        padding: 1em;
+        color: white;
+        background-color: deepskyblue;
+        clear: left;
+        text-align: center;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 10px;
+        padding: 10;
+        font-family: Algerian;
+        overflow: hidden;
+        background-color: skyblue;
+        overflow: auto;
+    }
+    
+    li {
+        float: left;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul a {
+        text-decoration: none;
+    }
+    
+    article {
+        margin-left: 0px;
+        border-left: 0px solid black;
+        padding: 1em;
+        overflow: hidden;
+    }
+    
+    body {
+        background-image: url(login.jpg);
+    }
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">Calorie Counter/Weight Management System</a>
+            </div>
+
+            <ul class="nav nav navbar-nav">
+                <li class="active"><a href="Home.html">Home</a></li>
+                <li class="active"><a href="Food.html">Food</a></li>
+                <li class="active"><a href="Exercise.html">Exercise</a></li>
+                <li class="active"><a href="Apps.html">Apps</a></li>
+                <li class="active"><a href="Challenges.html">Challenges</a></li>
+                <li class="active"><a href="Blog.html">Blog</a></li>
+                <li class="active"><a href="ContactUs.html">About us</a></li>
+                <li class="active"><a href="Index.html">Log Out</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <body>
+        <h2 style="font-style: normal; color: blue; margin-top: 15%">Please check your inbox in a while we will send out any email with all the instructions to reset your password. note:Please
+            see you spam if dont seen an email from us in inbox
+
+        </h2>
+    </body>
+
+    <button id="home" class="float-left submit-button" style=" color: blueviolet;font-weight: bold; margin-left: 50%">Click to Login</button>
+
+    <script type="text/javascript">
+        document.getElementById("home").onclick = function () {
+            location.href = "Index.html";
+        };
+
+    </script>
